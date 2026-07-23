@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HIROCROSS PERFORMANCE TECHNOLOGY"
+            android:textColor="@color/muted"
+            android:textSize="11sp"
+            android:letterSpacing="0.12"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone VBT Professional v3.0"
+            android:textColor="@color/text"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_panel"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/inputAthlete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama atlet"
+                android:textColor="@color/text"
+                android:textColorHint="@color/muted"
+                android:background="@drawable/bg_input"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/inputExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Latihan"
+                android:text="Back Squat"
+                android:textColor="@color/text"
+                android:textColorHint="@color/muted"
+                android:background="@drawable/bg_input"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/inputLoad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Beban (kg)"
+                android:inputType="numberDecimal"
+                android:text="20"
+                android:textColor="@color/text"
+                android:textColorHint="@color/muted"
+                android:background="@drawable/bg_input"/>
+
+            <EditText
+                android:id="@+id/inputBodyMass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Berat badan atlet (kg)"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text"
+                android:textColorHint="@color/muted"
+                android:background="@drawable/bg_input"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/inputEffectiveBodyMass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kontribusi berat badan yang bergerak (%)"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:textColor="@color/text"
+                android:textColorHint="@color/muted"
+                android:background="@drawable/bg_input"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btnCalibrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KALIBRASI"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MULAI SET"
+                android:layout_marginHorizontal="4dp"/>
+
+            <Button
+                android:id="@+id/btnDashboard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DASHBOARD"
+                android:layout_marginHorizontal="4dp"/>
+
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HISTORY"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: IDLE"
+            android:textColor="@color/muted"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_panel"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VELOCITY REAL-TIME"
+                android:textColor="@color/muted"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/textVelocity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/text"
+                android:textSize="64sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="m/s"
+                android:textColor="@color/muted"/>
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="5"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:id="@+id/textDirection" android:layout_width="0dp" android:layout_columnWeight="1" android:background="@drawable/bg_panel" android:padding="12dp" android:text="Arah: DIAM" android:textColor="@color/text"/>
+            <TextView android:id="@+id/textRep" android:layout_width="0dp" android:layout_columnWeight="1" android:background="@drawable/bg_panel" android:padding="12dp" android:text="Rep: 0" android:textColor="@color/text"/>
+            <TextView android:id="@+id/textMean" android:layout_width="0dp" android:layout_columnWeight="1" android:background="@drawable/bg_panel" android:padding="12dp" android:text="Mean: 0.00 m/s" android:textColor="@color/text"/>
+            <TextView android:id="@+id/textPeak" android:layout_width="0dp" android:layout_columnWeight="1" android:background="@drawable/bg_panel" android:padding="12dp" android:text="Peak: 0.00 m/s" android:textColor="@color/text"/>
+            <TextView android:id="@+id/textRom" android:layout_width="0dp" android:layout_columnWeight="1" android:background="@drawable/bg_panel" android:padding="12dp" android:text="ROM: 0.00 m" android:textColor="@color/text"/>
+            <TextView android:id="@+id/textLoss" android:layout_width="0dp" android:layout_columnWeight="1" android:background="@drawable/bg_panel" android:padding="12dp" android:text="Loss: 0.0%" android:textColor="@color/text"/>
+            <TextView android:id="@+id/textZone" android:layout_width="0dp" android:layout_columnWeight="1" android:background="@drawable/bg_panel" android:padding="12dp" android:text="Zone: -" android:textColor="@color/text"/>
+            <TextView android:id="@+id/textEstimated1RM" android:layout_width="0dp" android:layout_columnWeight="1" android:background="@drawable/bg_panel" android:padding="12dp" android:text="Est. 1RM: 0 kg" android:textColor="@color/text"/>
+        
+            <TextView
+                android:id="@+id/textMeanPower"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/bg_panel"
+                android:padding="12dp"
+                android:text="Mean Power: 0 W"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:id="@+id/textPeakPower"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/bg_panel"
+                android:padding="12dp"
+                android:text="Peak Power: 0 W"
+                android:textColor="@color/text"/>
+
+        </GridLayout>
+
+        <com.hirocross.vbt.VelocityChartView
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/bg_panel"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SELESAI SET"
+                android:layout_marginEnd="5dp"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RESET"
+                android:layout_marginStart="5dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Riwayat rep akan muncul di sini."
+            android:textColor="@color/muted"
+            android:background="@drawable/bg_panel"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>
