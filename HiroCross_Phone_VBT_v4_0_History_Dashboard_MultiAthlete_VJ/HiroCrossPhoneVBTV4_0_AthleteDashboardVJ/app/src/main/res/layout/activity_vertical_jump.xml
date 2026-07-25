@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="HIROCROSS PERFORMANCE TEST" android:textColor="@color/muted" android:textSize="12sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Vertical Jump" android:textColor="@color/text" android:textSize="28sp"
+            android:textStyle="bold" android:layout_marginBottom="12dp"/>
+        <AutoCompleteTextView android:id="@+id/inputVjAthlete" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Pilih atlet" android:textColor="@color/text"
+            android:textColorHint="@color/muted" android:background="@drawable/bg_input"/>
+        <Spinner android:id="@+id/spinnerVjType" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+        <EditText android:id="@+id/inputFlightTime" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Flight time (ms), contoh 500"
+            android:inputType="numberDecimal" android:textColor="@color/text"
+            android:textColorHint="@color/muted" android:background="@drawable/bg_input"
+            android:layout_marginTop="8dp"/>
+        <EditText android:id="@+id/inputVjBodyMass" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Berat badan (kg), opsional"
+            android:inputType="numberDecimal" android:textColor="@color/text"
+            android:textColorHint="@color/muted" android:background="@drawable/bg_input"
+            android:layout_marginTop="8dp"/>
+        <Button android:id="@+id/btnCalculateVj" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="HITUNG DAN SIMPAN"
+            android:layout_marginTop="10dp"/>
+        <TextView android:id="@+id/textVjResult" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Hasil akan muncul di sini."
+            android:textColor="@color/text" android:textSize="20sp" android:textStyle="bold"
+            android:gravity="center" android:background="@drawable/bg_panel" android:padding="16dp"
+            android:layout_marginTop="12dp"/>
+        <TextView android:id="@+id/textVjHistory" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Belum ada hasil Vertical Jump."
+            android:textColor="@color/text" android:background="@drawable/bg_panel" android:padding="12dp"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>

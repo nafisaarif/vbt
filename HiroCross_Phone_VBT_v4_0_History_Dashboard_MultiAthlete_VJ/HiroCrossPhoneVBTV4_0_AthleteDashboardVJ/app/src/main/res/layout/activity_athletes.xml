@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="MULTI-ATHLETE" android:textColor="@color/muted" android:textSize="12sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Profil Atlet" android:textColor="@color/text" android:textSize="28sp"
+            android:textStyle="bold" android:layout_marginBottom="12dp"/>
+        <EditText android:id="@+id/inputAthleteName" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Nama atlet" android:textColor="@color/text"
+            android:textColorHint="@color/muted" android:background="@drawable/bg_input"/>
+        <EditText android:id="@+id/inputAthleteSex" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Jenis kelamin" android:textColor="@color/text"
+            android:textColorHint="@color/muted" android:background="@drawable/bg_input" android:layout_marginTop="8dp"/>
+        <EditText android:id="@+id/inputBirthYear" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Tahun lahir" android:inputType="number"
+            android:textColor="@color/text" android:textColorHint="@color/muted"
+            android:background="@drawable/bg_input" android:layout_marginTop="8dp"/>
+        <EditText android:id="@+id/inputSport" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Cabang olahraga" android:textColor="@color/text"
+            android:textColorHint="@color/muted" android:background="@drawable/bg_input" android:layout_marginTop="8dp"/>
+        <EditText android:id="@+id/inputAthleteMass" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Berat badan (kg)" android:inputType="numberDecimal"
+            android:textColor="@color/text" android:textColorHint="@color/muted"
+            android:background="@drawable/bg_input" android:layout_marginTop="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="10dp">
+            <Button android:id="@+id/btnSaveAthlete" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1" android:text="SIMPAN"/>
+            <Button android:id="@+id/btnDeleteAthlete" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1" android:text="HAPUS"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <TextView android:id="@+id/athleteList" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Belum ada profil atlet."
+            android:textColor="@color/text" android:background="@drawable/bg_panel"
+            android:padding="12dp" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>
